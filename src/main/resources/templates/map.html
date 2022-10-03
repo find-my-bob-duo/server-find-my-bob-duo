@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link th:href="@{/style.css}" rel="stylesheet" />
+    <Title>테스트 타이틀</Title>
+</head>
+<body>
+<div class="wrap">
+    <!-- HEADER -->
+    <div class="header">
+        <span>이곳은 상단 헤더 영역 입니다. 색깔은 주황</span>
+    </div>
+    <!-- MIDDLE -->
+    <div class="middle">
+        <div class="middle-left" id="map"></div>
+        <div class="middle-right">
+            <!-- 위치 정보 가져오는 버튼 -->
+            <button type="button" class="btn btn-lg btn-primary"
+                    onclick="getCurrentPosBtn()">내 위치 가져오기</button>
+            <input type="text" class="form-control" id="keyword" onkeypress="if(event.keyCode==13){keywordSearch();}"
+                   placeholder="키워드(ex 국밥,불고기)">
+            <span>최근키워드</span>
+            <button type="button" class="btn btn-lg btn-primary" onclick="keywordSearch()">검색</button>
+            <div class="result-list">
+                <ul id="placesList"></ul>
+                <div id="pagination"></div>
+            </div>
+        </div>
+    </div>
+    <div style="clear:both"></div>
+    <div class="footer">
+        <span>이곳은 하단 푸터 영역 입니다. 색깔은 초록</span>
+    </div>
+</div>
+
+<!--로컬환경이므로 개인의 kakao api 키를 적용해야 테스트가 될것임.-->
+<script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=4c065763f0498963b8280d149dab9d58&libraries=services"></script>
+<script type="text/javascript" th:src="@{map.js}"></script>
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+</body>
+</html>

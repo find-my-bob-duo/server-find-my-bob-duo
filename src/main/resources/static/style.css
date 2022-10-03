@@ -1,0 +1,42 @@
+body{
+    margin: 0;
+}
+.wrap{
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    background-color: pink;
+    position: relative;
+    text-align: center;
+}
+.header{
+    height: 15vh;
+    background: orange;
+}
+.middle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+.middle-left{
+    height: 60vh;
+    width: 40vw;
+    background-color: aqua;
+    margin-right: 1vw;
+    float: left;
+}
+.middle-right{
+    height: 60vh;
+    width: 10vw;
+    background-color: grey;
+    float: left;
+}
+.footer{
+    height: 15vh;
+    width: 100vw;
+    background: green;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
